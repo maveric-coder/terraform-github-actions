@@ -6,7 +6,7 @@ GitHub Actions add continuous integration to GitHub repositories to automate you
 
 HashiCorp provides GitHub Actions that integrate with the Terraform Cloud API. These actions let you create your own custom CI/CD workflows to meet the needs of your organization.
 
-<img src = >
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/assets.png" >
 
 The workflow will:
 
@@ -25,16 +25,18 @@ Terraform Cloud's built-in support for GitHub webhooks can accomplish this gener
 ## Set up Terraform Cloud
 
 First, create a new Terraform Cloud workspace.
-<br>Go to the *Create a new Workspace page* and select *API-driven workflow*.
-<img src = >
+<br>Go to the *Create a new Workspace page* 
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/1.png" >
+Select *API-driven workflow*.
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/2.png" >
 
 Name your workspace *Terraform_Prod* or a new name and click Create workspace.
 
-
 Now, find the AWS credentials you want to use for the workspace, or create a new key pair in the IAM console. 
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/aws_tokens.png" >
 
 Then, add the following as Environment Variables for your learn-terraform-github-actions workspace.
-
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/3.png" >
 
 |Type|	Variable name|	Description|	Sensitive|
 |-----|-----|-----|--|
@@ -45,9 +47,10 @@ Then, add the following as Environment Variables for your learn-terraform-github
 Terraform Cloud will use these credentials to authenticate to AWS.
 
 Finally, go to the Tokens page in your Terraform Cloud User Settings.
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/4.png" >
 
 Click on Create an API token, enter GitHub Actions for the Description, then click Generate token. And copy the token.
-
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/5.png" >
 
 
 ## Set up a GitHub repository
@@ -57,9 +60,10 @@ Navigate to the [Learn Terraform GitHub Actions](https://github.com/hashicorp-ed
 Select Use this template, then select Create a new repository. In our case we already have the repository so no need create a new repository.
 
 In the repository, navigate to the Settings page. Open the Secrets and variables menu, then select Actions.
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/6.png" >
 
 Now, select New repository secret. Create a secret named TF_API_TOKEN, setting the Terraform Cloud API token you created in the previous step as the value.
-
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/7.png" >
 Now, clone the repository.
 ```sh
 git clone git@github.com:maveric-coder/terraform-github-actions.git
