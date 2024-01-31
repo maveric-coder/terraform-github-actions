@@ -174,3 +174,10 @@ git push origin update-tfc-org
 ```
 
 Head to Github and, open a pull request from the update-tfc-org branch. From the base drop-down, choose the main branch.
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/8.png" >
+
+Go to actions tab in GitHub and observe terraform execution. 
+<br>As well head to Terraform cloud and see the created resources
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/9.png" >
+
+
