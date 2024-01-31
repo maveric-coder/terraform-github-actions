@@ -92,7 +92,7 @@ In your editor, open `.github/workflows/terraform-plan.yml`.
 env:
   TF_CLOUD_ORGANIZATION: "YOUR-ORGANIZATION-HERE"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "learn-terraform-github-actions"
+  TF_WORKSPACE: "YOUR-WORKSPACE-HERE"
   CONFIG_DIRECTORY: "./"
 ## ...
 ```
