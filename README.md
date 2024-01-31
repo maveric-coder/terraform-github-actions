@@ -26,22 +26,22 @@ Terraform Cloud's built-in support for GitHub webhooks can accomplish this gener
 
 First, create a new Terraform Cloud workspace.
 <br>Go to the *Create a new Workspace page* 
-<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/1.png" >
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/1.png"  width = 800, height = 450>
 
 Select *API-driven workflow*.
 
-<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/2.png" >
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/2.png" width = 800, height = 450>
 
 Name your workspace *Terraform_Prod* or a new name and click Create workspace.
 
 Now, find the AWS credentials you want to use for the workspace, or create a new key pair in the IAM console. 
 
-<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/aws_tokens.png" >
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/aws_tokens.png" width = 400, height = 450><br>
 
 
 Then, add the following as Environment Variables for your learn-terraform-github-actions workspace.
 
-<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/3.png" >
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/3.png" width = 800, height = 450>
 
 |Type|	Variable name|	Description|	Sensitive|
 |-----|-----|-----|--|
@@ -53,12 +53,12 @@ Terraform Cloud will use these credentials to authenticate to AWS.
 
 Finally, go to the Tokens page in your Terraform Cloud User Settings.
 
-<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/4.png" >
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/4.png" width = 700, height = 450>
 
 
 Click on Create an API token, enter GitHub Actions for the Description, then click Generate token. And copy the token.
 
-<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/5.png" >
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/5.png" width = 700, height = 450>
 
 
 ## Set up a GitHub repository
@@ -71,7 +71,9 @@ In the repository, navigate to the Settings page. Open the Secrets and variables
 <img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/6.png" >
 
 Now, select New repository secret. Create a secret named TF_API_TOKEN, setting the Terraform Cloud API token you created in the previous step as the value.
-<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/7.png" >
+
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/7.png" width = 400, height = 400>
+
 Now, clone the repository.
 ```sh
 git clone git@github.com:maveric-coder/terraform-github-actions.git
@@ -174,20 +176,24 @@ git push origin update-tfc-org
 ```
 
 Head to Github and, open a pull request from the update-tfc-org branch. From the base drop-down, choose the main branch.
-<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/8.png" >
+
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/8.png" width = 800, height = 700>
 
 
 Go to actions tab in GitHub and observe terraform execution. 
 <br>As well head to Terraform cloud and see the created resources
+
 <img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/9.png" >
 
 Post completion delete the merged branch as seen the earlier picture in pull request tab.
 
 In Terraform cloud from settings tab select Destruction and Deletion and choose Queue destroy plan
+
 <img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/10.png" >
 
 
 Post execution of plan, click on confirm & apply with proper comment and delete the resources.
+
 <img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/11.png" >
 
 
