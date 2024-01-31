@@ -36,8 +36,8 @@ Now, find the AWS credentials you want to use for the workspace, or create a new
 Then, add the following as Environment Variables for your learn-terraform-github-actions workspace.
 
 
-|Type|	Variable name|	Description	Sensitive|
-|-----|-----|-----|
+|Type|	Variable name|	Description|	Sensitive|
+|-----|-----|-----|--|
 |Environment variable|	AWS_ACCESS_KEY_ID|	The access key ID from your AWS key pair|	No|
 |Environment variable|	AWS_SECRET_ACCESS_KEY|	The secret access key from your AWS key pair|	Yes|
 
