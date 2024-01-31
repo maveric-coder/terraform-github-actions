@@ -176,8 +176,18 @@ git push origin update-tfc-org
 Head to Github and, open a pull request from the update-tfc-org branch. From the base drop-down, choose the main branch.
 <img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/8.png" >
 
+
 Go to actions tab in GitHub and observe terraform execution. 
 <br>As well head to Terraform cloud and see the created resources
 <img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/9.png" >
+
+Post completion delete the merged branch as seen the earlier picture in pull request tab.
+
+In Terraform cloud from settings tab select Destruction and Deletion and choose Queue destroy plan
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/10.png" >
+
+
+Post execution of plan, click on confirm & apply with proper comment and delete the resources.
+<img src = "https://github.com/maveric-coder/Terraform/blob/main/files/content/11.png" >
 
 
